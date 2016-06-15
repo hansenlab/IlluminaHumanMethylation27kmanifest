@@ -1,7 +1,11 @@
 library(minfi)
 
 manifest <- "../../../IlluminaHumanMethylation27k_files/data/HumanMethylation27_270596_v.1.2.bpm"
-stopifnot(file.exists(manifest))
+if(!file.exists(manifestFile)) {
+    cat("Missing files, quitting\n")
+    q(save = "no")
+}
+
 maniTmp <- minfi:::read.manifest.27k(manifest)
 
 ## Manifest package
@@ -25,3 +29,6 @@ IlluminaHumanMethylation27kmanifest <- IlluminaMethylationManifest(TypeI = maniL
 stopifnot(validObject(IlluminaHumanMethylation27kmanifest))
 save(IlluminaHumanMethylation27kmanifest, compress = "xz",
      file = "../../data/IlluminaHumanMethylation27kmanifest.rda")
+
+sessionInfo()
+q(save = "no")
