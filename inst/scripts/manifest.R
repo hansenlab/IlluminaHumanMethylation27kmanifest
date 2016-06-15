@@ -1,6 +1,6 @@
 library(minfi)
 
-manifest <- "../../../files_27k/HumanMethylation27_270596_v.1.2.bpm"
+manifest <- "../../../IlluminaHumanMethylation27k_files/data/HumanMethylation27_270596_v.1.2.bpm"
 stopifnot(file.exists(manifest))
 maniTmp <- minfi:::read.manifest.27k(manifest)
 

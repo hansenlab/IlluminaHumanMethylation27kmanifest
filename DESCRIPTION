@@ -1,5 +1,5 @@
 Package: IlluminaHumanMethylation27kmanifest
-Version: 0.4.0
+Version: 0.5.0
 Title: Annotation for Illumina's 27k methylation arrays
 Description: Manifest for Illumina's 27k array data.
 Author: Kasper Daniel Hansen, Jean-Philippe Fortin, Tim Triche
